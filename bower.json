@@ -1,0 +1,8 @@
+{
+	"name":"MTM4086-Assignment-5",
+	"dependencies":{
+		"foundation":"~5",
+		"ember": "~1.4",
+        "ember-data": "~1.0.0-beta.5"
+	}
+}
