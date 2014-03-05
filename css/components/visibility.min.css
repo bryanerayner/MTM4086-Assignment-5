@@ -1,0 +1,1 @@
+.show-on-hover{display:none}:hover>.show-on-hover{display:block}*>.show-on-hover,*>:hover>.show-on-hover,.show-on-hover:hover,:hover .show-on-hover,:hover>.show-on-hover{display:block}.show-on-hover{display:none}

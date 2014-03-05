@@ -1,0 +1,52 @@
+.promo
+{
+	float:left; position: relative;
+	@media #{$small-up}
+	{
+		width: 100%;
+	}
+	@media #{$medium-up}
+	{
+		width: 33.333%;
+	}
+
+	> ._bgImage
+	{
+		width:100%; min-height:63%;
+		height: calc(100% * 1.58);
+		display: block;
+		img
+		{
+			width:100%;
+		}
+	}
+
+	> .module.sale_btn
+	{
+		position: absolute;
+		right:1em; bottom:1em;
+	}
+
+	> ._details
+	{
+		position: absolute;
+		left:0;top:0;right:0;bottom:0;
+	}
+}
+
+.promo.promo-featured
+{
+	@media #{$small-up}
+	{
+		width: 100%;
+	}
+	@media #{$medium-up}
+	{
+		width: 66.6666%;
+		+ .promo{
+			float:right;			
+		}
+	}
+
+
+}

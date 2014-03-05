@@ -3,22 +3,84 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Humble Bumble Store</title>
+    <link rel="stylesheet" href="css/store.css">
+
 </head>
 <body>
 
 
-  <script type="text/x-handlebars" data-template-name="store">
+  <script type = "text/x-handlebars" data-template-name = "application">
 
-    <section id="storeapp">
-      
-    </section>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+    <h1><a href="">The Humble Store</a></h1>
+    <li class="toggle-topbar menu-icon"><a href="">Menu</a></li>
+    </li>
+  </ul>
 
-    <footer id="info">
-      <p>Double-click to edit a todo</p>
-    </footer>
+  <section class="top-bar-section">
+    <ul class="right">
+      <li class="active"><a href="">Catalogue</a></li>
+    </ul>
+  </section>
+</nav>
+
+
+{{outlet}}
+
+
+
+
+</div>
+
 
   </script>
 
+<script type = "text/x-handlebars" data-template-name = "index">
+{{outlet}}
+</script>
+
+
+  <script type="text/x-handlebars" data-template-name="promos/index">
+  <div class="layout-featured">
+
+  {{#each promos}}
+    {{partial "promo"}}
+  {{/each}}
+  </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="promo">
+    <div class="promo {{#if featured}}promo-featured{{/if}} clearfix">
+    <div class="_bgImage">
+      <img src="http://placehold.it/100x63" alt="" class="_bgImage">
+    </div>
+
+    <div class="show-on-hover _details">
+      <h2 class="_name">This Game</h2>
+      {{partial "proxime"}}
+      <a href="" class="_description">View trailer &amp; description...</a>
+    </div>
+
+    <div class="module sale_btn">
+      <span class="_section _section-regular">19.99</span>
+      <span class="_section _section-price">13.44</span>   
+    </div>
+
+  </div>
+  </script>
+
+
+  <script type = "text/x-handlebars" data-template-name = "proxime">
+    <div class="module proxime">
+      <div class="_steam"></div>
+      <div class="_drmFree"></div>
+      <div class="_mac"></div>
+      <div class="_windows"></div>
+      <div class="_linux"></div>
+    </div>
+  </script>
 	
 
 	<script src="bower_components/jquery/jquery.min.js"></script>
@@ -27,6 +89,8 @@
 	<script src="bower_components/ember-data/ember-data.js"></script>
 
   <script src="js/application.js"></script>
+  <script src="js/models/game.js"></script>
+  <script src="js/models/promo.js"></script>
   <script src="js/router.js"></script>
 
 </body>
