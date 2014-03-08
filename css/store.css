@@ -5568,7 +5568,7 @@ th.hide-for-touch {
 .promo {
   float: left;
   position: relative; }
-  .promo:nth-child(3n + 4) {
+  .promo:nth-child(9n + 12) {
     clear: left; }
   @media only screen {
     .promo {
@@ -5611,3 +5611,26 @@ th.hide-for-touch {
   float: left; }
   .sale_btn > ._section._section-regular {
     border-right: 1px solid #fff; }
+
+.game {
+  width: 100%; }
+  .game ._game-thumb {
+    line-height: 0;
+    display: inline-block;
+    border: solid 4px white;
+    max-width: 100%;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    width: 8.33333%;
+    float: left; }
+    .game ._game-thumb:hover, .game ._game-thumb:focus {
+      -webkit-box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
+      box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5); }
+  .game ._game-name {
+    width: 100%;
+    float: left;
+    margin: 0; }
+  .game .module.proxime {
+    float: right; }
+  .game .module.sale_btn {
+    float: right; }

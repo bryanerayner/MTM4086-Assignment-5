@@ -1,0 +1,32 @@
+@import "../../bower_components/foundation/scss/foundation/components/thumbs";
+
+.game
+{
+	width:100%;
+
+	._game-thumb
+	{
+		@include thumb();
+		width: percentage(1/12);
+		float:left;
+	}
+
+	._game-name
+	{
+		width:100%;
+		float:left;
+		margin:0;
+	}
+
+	.module.proxime
+	{
+		float:right;
+	}
+
+	.module.sale_btn
+	{
+		float:right;
+	}
+
+	
+}

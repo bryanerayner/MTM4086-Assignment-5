@@ -27,7 +27,10 @@ Store.IndexRoute = Em.Route.extend({
     // };
   },
   
+
+  // Hook that runs when the controllers are being set up.
   setupController: function(controller, model) {
+
     this.controllerFor('promos').set('model', this.store.find('promo'));
     this.controllerFor('games').set('model', this.store.find('game'));
 
@@ -64,7 +67,26 @@ Store.PromosController = Em.ArrayController.extend({
       return 0;
     }
     return xFactor < yFactor ? -1 : 1;
-  }
+  },
+
+  displayedPromosCount:9,
+
+  displayedPromos:Em.computed(function()
+  {
+    var counter = 0;
+    var promosCount = this.get('displayedPromosCount');
+
+    if (!this.get('arrangedContent')){return this.get('content');}
+
+    return this.get("arrangedContent").filter(function(promo, index){
+      if (index < promosCount)
+      {
+        return true;
+      }
+      return false;
+    });
+  }).property('arrangedContent.[]', 'displayedPromosCount')
+  
 });
 
 Store.PromoController = Em.ObjectController.extend({
@@ -96,4 +118,17 @@ Handlebars.registerHelper("debug", function(optionalValue) {
     console.log("====================");
     console.log(optionalValue);
   }
+});
+
+
+
+Store.GamePromotionComponent = Ember.Component.extend({
+  tagName: 'div',
+  classNames: ['promo', 'clearfix'],
+  classNameBindings: ['promo.featured:promo-featured']
+});
+
+Store.GamePreviewComponent = Ember.Component.extend({
+  tagName: 'div',
+  classNames: ['game', 'clearfix']
 });
