@@ -104,7 +104,22 @@ Store.GamesRoute = Em.Route.extend({
   }
 });
 
-Store.GamesController = Em.ArrayController.extend({
+Store.GamesController = Em.ArrayController.extend(Store.PaginatableMixin, {
+
+  page:1,
+  perPage:6,
+
+  filteredContent: Em.computed(function() {
+    var content = this.get('content');
+
+    return content;
+  }).property('content'),
+
+  paginatedSource:Em.computed(function()
+  {
+    return this.get('filteredContent');
+  }).property('filteredContent')
+
 
 });
 

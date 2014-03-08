@@ -43,6 +43,37 @@
 
 </script>
 
+  <script type="text/javascript" data-template-name = "components/pagination-links">
+    {{# if showPagination}}
+    <div class="pagination pagination-centered">
+      <ul>
+        <li {{bind-attr class="hasPrevious::disabled"}}>
+          <a {{action goToPreviousPage}}>&laquo;</a>
+        </li>
+        {{#if showBeforeEllipsis}}
+          {{pagination-page page=1 currentPage=page}}
+          <li class="disabled"><a>&hellip;</a></li>
+        {{/if}}
+        {{#each pageNumber in visiblePages}}
+          {{pagination-page page=pageNumber currentPage=page}}
+        {{/each}}
+        {{#if showAfterEllipsis}}
+          <li class="disabled"><a>&hellip;</a></li>
+          {{pagination-page page=lastPage currentPage=page}}
+        {{/if}}
+        <li {{bind-attr class="hasNext::disabled"}}>
+          <a {{action goToNextPage}}>
+            &raquo;
+          </a>
+      </ul>
+    </div>
+  {{/if}}
+  </script>
+
+
+  <script type="text/javascript" data-template-name = "components/pagination-page">
+    <a {{action pageClicked}}>{{page}}</a>
+  </script>
 
   <script type="text/x-handlebars" data-template-name="promos">
   <div class="row">
@@ -102,10 +133,13 @@
   <div class="small-12 medium-9 medium-push-3 columns">
     <div class="row collapse">
       
-    {{#each game in controller}}
+    {{#each game in controller.paginatedContent}}
       {{debug this}}
       {{game-preview game = game}}
     {{/each}}
+
+    {{pagination-links page=page pages=pages}}
+
     </div>
   </div>
 
@@ -153,8 +187,10 @@
 	<script src="bower_components/ember-data/ember-data.js"></script>
 
   <script src="js/application.js"></script>
+  <script src="js/components/pagination.js"></script>
   <script src="js/models/game.js"></script>
   <script src="js/models/promo.js"></script>
+  <script src="js/mixins/paginatable.js"></script>
   <script src="js/router.js"></script>
 
 </body>
