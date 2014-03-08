@@ -1,0 +1,9 @@
+@import "../bower_components/foundation/scss/foundation/components/global";
+
+
+
+.quicklinks
+{
+	@include clearfix();
+	background:#333333;
+}

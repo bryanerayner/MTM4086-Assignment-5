@@ -1,4 +1,4 @@
-<!doctype>
+<!doctype html>
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -29,6 +29,8 @@
 
 {{outlet}}
 
+{{render "promos"}}
+{{render "games"}}
 
 
 
@@ -38,27 +40,30 @@
   </script>
 
 <script type = "text/x-handlebars" data-template-name = "index">
-{{outlet}}
+
 </script>
 
 
-  <script type="text/x-handlebars" data-template-name="promos/index">
+  <script type="text/x-handlebars" data-template-name="promos">
   <div class="layout-featured">
-
-  {{#each promos}}
+  
+  {{#each promo in controller}}
+    {{debug this}}
     {{partial "promo"}}
   {{/each}}
   </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="promo">
-    <div class="promo {{#if featured}}promo-featured{{/if}} clearfix">
+  {{#with promo}}
+    {{log featured}}
+    <div {{bind-attr class=":promo :clearfix featured:promo-featured"}}>
     <div class="_bgImage">
-      <img src="http://placehold.it/100x63" alt="" class="_bgImage">
+      <img {{bind-attr src="game.img_Lg"}} widht = "304" height = "189" alt="" class="_bgImage">
     </div>
 
     <div class="show-on-hover _details">
-      <h2 class="_name">This Game</h2>
+      <h2 class="_name">{{game.name}}</h2>
       {{partial "proxime"}}
       <a href="" class="_description">View trailer &amp; description...</a>
     </div>
@@ -69,19 +74,40 @@
     </div>
 
   </div>
+  {{/with}}
   </script>
 
 
   <script type = "text/x-handlebars" data-template-name = "proxime">
     <div class="module proxime">
-      <div class="_steam"></div>
-      <div class="_drmFree"></div>
-      <div class="_mac"></div>
-      <div class="_windows"></div>
-      <div class="_linux"></div>
+      {{#if steam}}
+      <div class="_steam">Steam</div>
+      {{/if}}
+      {{#if drmFree}}
+      <div class="_drmFree">DRM free</div>
+      {{/if}}
+      {{#if mac}}
+      <div class="_mac">Mac</div>
+      {{/if}}
+      {{#if windows}}
+      <div class="_windows">Windows</div>
+      {{/if}}
+      {{#if linux}}
+      <div class="_linux">Linux</div>
+      {{/if}}
     </div>
   </script>
 	
+  <script type = "text/x-handlebars" data-template-name = "games">
+    Dem Games
+
+  </script>
+
+  <script type = "text/x-handlebars" data-template-name = "game">
+    Da Game yo!
+
+  </script>
+
 
 	<script src="bower_components/jquery/jquery.min.js"></script>
 	<script src="bower_components/handlebars/handlebars.js"></script>

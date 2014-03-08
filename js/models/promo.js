@@ -14,7 +14,7 @@ Store.Promo.FIXTURES = [
 		id: 1,
 		priority:1,
 		created:new Date(2013, 11 , 23, 4, 34, 3, 34),
-		featured:false,
+		featured:true,
 		game:1
 	},
 	{

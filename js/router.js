@@ -7,63 +7,93 @@ Store.Router.map(function() {
  //  	this.route("new");
  //  });
  
+
   this.resource('promos', function(){
-  	this.route("new");
+  	
   });
 
-  this.resource('promo', {path:'/promo/:promo_id'});
-
   this.resource('games', function(){
-  	this.route("new");
-  })
+  	
+  });
 
 });
 
-Store.ApplicationRoute = Ember.Route.extend({
-  previousRoute: 'index', //will be a variable in the real app
+Store.IndexRoute = Em.Route.extend({
+  model: function(){
+
+    // return {
+    //   games: this.store.find('game'),
+    //   promos: this.store.find('promo')
+    // };
+  },
   
+  setupController: function(controller, model) {
+    this.controllerFor('promos').set('model', this.store.find('promo'));
+    this.controllerFor('games').set('model', this.store.find('game'));
+
+    controller.set('content', model);
+  }
+  // renderTemplate:function(){
+    // this.render('index', {into:'application'});
+    // this.render('games', { into: 'application', outlet: 'games' });
+    // this.render('promos', { into: 'application', outlet: 'promos' });
+  // }
+});
+
+Store.PromosRoute = Em.Route.extend({
+  
+  setupController: function(controller, model) {
+
+
+    controller.set('content', model);
+  },
+
+  model:function(){
+    return this.store.find('promo');
+  }
+});
+
+Store.PromosController = Em.ArrayController.extend({
+  needs: ['games'],
+  sortFunction: function(x,y) { // These are assumed to be integers
+    var xFactor, yFactor;
+    xFactor = x.created.value + (100000 * x.priority);
+    yFactor = y.created.value + (100000 * y.priority);
+    if (xFactor === yFactor)
+    {
+      return 0;
+    }
+    return xFactor < yFactor ? -1 : 1;
+  }
+});
+
+Store.PromoController = Em.ObjectController.extend({
 
 });
 
-Store.IndexRoute = Ember.Route.extend({
-	redirect:function()
-	{
-		this.transitionTo('promos');
+Store.GamesRoute = Em.Route.extend({
+  setupController: function(controller, model) {
+    
+    controller.set('content', model);
+  },
 
-	}
+  model:function(){
+    return this.store.find('game');
+  }
 });
 
-Store.PromosIndexRoute = Ember.Route.extend({
-	model:function(){
-		return this.store.find('promo');
-	}
+Store.GamesController = Em.ArrayController.extend({
+
 });
 
-Store.PromoRoute = Ember.Route.extend({
-
-	setupController:function(controller, model){
-		controller.set('model', model);
-	},
-	model:function(params){
-			return this.store.find('promo', params.promo_id);
-		
-	}
-});
-
-
-Store.GamesIndexRoute = Ember.Route.extend({
-	model:function(){
-		return this.store.find('game');
-	}
-});
-
-Store.GamesRoute = Ember.Route.extend({
-
-	model:function(){
-		return this.store.find('game');
-	}
-});
-
-Store.PromosController = Ember.ArrayController.extend({
-
+Handlebars.registerHelper("debug", function(optionalValue) {
+  console.log("Current Context");
+  console.log("====================");
+  console.log(this);
+ 
+  if (optionalValue) {
+    console.log("Value");
+    console.log("====================");
+    console.log(optionalValue);
+  }
 });

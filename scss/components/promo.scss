@@ -1,6 +1,14 @@
+@import "../../bower_components/foundation/scss/foundation/components/global";
+
 .promo
 {
 	float:left; position: relative;
+
+	&:nth-child(3n + 4)
+	{
+		clear:left;
+	}
+
 	@media #{$small-up}
 	{
 		width: 100%;
