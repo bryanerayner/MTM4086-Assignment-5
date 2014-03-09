@@ -6,17 +6,19 @@ Store.Router.map(function() {
  //  this.resource('shop', { path: '/' }, function(){
  //  	this.route("new");
  //  });
- 
+
 
   this.resource('promos', function(){
   	
   });
 
-  this.resource('games', function(){
-  	
-  });
+  this.resource('games');
+
+  this.resource('game', {path: "/game/:game_id"} );
 
 });
+
+
 
 Store.IndexRoute = Em.Route.extend({
   model: function(){
@@ -95,14 +97,36 @@ Store.PromoController = Em.ObjectController.extend({
 
 Store.GamesRoute = Em.Route.extend({
   setupController: function(controller, model) {
+
+    this.controllerFor('promos').set('model', this.store.find('promo'));
+    this.controllerFor('games').set('model', this.store.find('game'));
+
     
     controller.set('content', model);
   },
 
-  model:function(){
+
+
+
+  model:function(params){
     return this.store.find('game');
   }
 });
+
+Store.GameRoute = Em.Route.extend({
+  setupController: function(controller, model) {
+
+    this.controllerFor('promos').set('model', this.store.find('promo'));
+    this.controllerFor('games').set('model', this.store.find('game'));
+
+    
+    controller.set('content', model);
+  },
+  
+  model:function(params){
+    return this.store.find('game', (params) ? params.game_id : null);
+  }
+})
 
 Store.GamesController = Em.ArrayController.extend(Store.PaginatableMixin, {
 
@@ -122,6 +146,8 @@ Store.GamesController = Em.ArrayController.extend(Store.PaginatableMixin, {
 
 
 });
+
+Store.GameController = Em.ObjectController.extend({});
 
 Handlebars.registerHelper("debug", function(optionalValue) {
   console.log("Current Context");

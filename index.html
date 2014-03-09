@@ -43,7 +43,7 @@
 
 </script>
 
-  <script type="text/javascript" data-template-name = "components/pagination-links">
+  <script type="text/x-handlebars" data-template-name = "components/pagination-links">
     {{# if showPagination}}
     <div class="pagination pagination-centered">
       <ul>
@@ -71,7 +71,7 @@
   </script>
 
 
-  <script type="text/javascript" data-template-name = "components/pagination-page">
+  <script type="text/x-handlebars" data-template-name = "components/pagination-page">
     <a {{action pageClicked}}>{{page}}</a>
   </script>
 
@@ -79,7 +79,6 @@
   <div class="row">
   <div class = "small-12 columns">
   {{#each promo in controller.displayedPromos}}
-  {{log promo}}
     {{game-promotion promo = promo}}
   {{/each}}
   </div>
@@ -95,16 +94,21 @@
     <div class="show-on-hover _details">
       <h2 class="_name">{{game.name}}</h2>
       {{partial "proxime"}}
-      <a href="" class="_description">View trailer &amp; description...</a>
+      {{#link-to 'game' game.id class = "_description"}}View trailer &amp; description...{{/link-to}}
     </div>
 
-    <div class="module sale_btn">
-      <span class="_section _section-regular">19.99</span>
-      <span class="_section _section-price">13.44</span>   
-    </div>
+    {{btn-price onSale = game.onSale price = game.price salePrice = game.price_sale}}
   {{/with}}
   </script>
 
+  <script type = "text/x-handlebars" data-template-name = "components/btn-price">
+    <span class="_prices">
+      <span class="_section _section-regular">{{price}}</span>
+      {{#if onSale}}
+      <span class="_section _section-price">{{salePrice}}</span>   
+      {{/if}}
+    </span>
+  </script>
 
   <script type = "text/x-handlebars" data-template-name = "proxime">
     <div class="module proxime">
@@ -129,12 +133,11 @@
   <script type = "text/x-handlebars" data-template-name = "games">
     
 
-<div class = "row">
+<div class = "row layout-gameList">
   <div class="small-12 medium-9 medium-push-3 columns">
     <div class="row collapse">
       
     {{#each game in controller.paginatedContent}}
-      {{debug this}}
       {{game-preview game = game}}
     {{/each}}
 
@@ -153,6 +156,11 @@
 
   </script>
 
+<script type = "text/x-handlebars" data-template-name = "game">
+Dis Game has a name, its names not Game, its {{name}}
+</script>
+
+
   <script type = "text/x-handlebars" data-template-name = "components/game-preview">
     {{#with game}}
       <article class="game clearfix">
@@ -166,10 +174,7 @@
           </div>
           <div class="small-4 columns">
               {{partial "proxime"}}
-              <div class="module sale_btn">
-                <div class="_section _section-regular">10.00</div>
-                <div class="_section _section-price">3.99</div>
-              </div>
+              {{btn-price onSale = onSale price = price salePrice = price_sale}}
             </div>
           </div>
         </div>
@@ -188,6 +193,7 @@
 
   <script src="js/application.js"></script>
   <script src="js/components/pagination.js"></script>
+  <script src="js/components/btn-price.js"></script>
   <script src="js/models/game.js"></script>
   <script src="js/models/promo.js"></script>
   <script src="js/mixins/paginatable.js"></script>
