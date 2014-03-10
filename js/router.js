@@ -130,13 +130,27 @@ Store.GameRoute = Em.Route.extend({
 Store.GamesController = Em.ArrayController.extend(Store.PaginatableMixin, {
 
   page:1,
-  perPage:6,
+  perPage:10,
+
+  filterText:"",
 
   filteredContent: Em.computed(function() {
     var content = this.get('content');
+    var filterText = this.get('filterText').toLowerCase();
 
-    return content;
-  }).property('content'),
+    var filterRegexString = "";
+
+    for (var i = 0, ii = filterText.length; i < ii; i++)
+    {
+      filterRegexString += filterText[i]+ "[\\s\\w]*";
+    }
+
+    var filterRegex = new RegExp(filterRegexString);
+
+    return content.filter(function(item) {
+        return (!!item.get("name").toLowerCase().match(filterRegex));
+    });
+  }).property('content.@each', 'filterText'),
 
   paginatedSource:Em.computed(function()
   {
@@ -146,7 +160,25 @@ Store.GamesController = Em.ArrayController.extend(Store.PaginatableMixin, {
 
 });
 
-Store.GameController = Em.ObjectController.extend({});
+Store.GameController = Em.ObjectController.extend({
+
+  proxime:function()
+  {
+    var names = ["steam", "drmFree", "linux", "windows", "mac"];
+    var stuff = {};
+    for (var i = 0, ii = names.length; i < ii; i++)
+    {
+      stuff[names[i]] = this.get(names[i]);
+    }
+    
+    return stuff;
+  }.property("steam", "drmFree", "linux", "windows", "mac"),
+
+  nameLower:function()
+  {
+    return this.get("name").toLowerCase();
+  }.property("name")
+});
 
 Store.GameView = Em.View.extend({
   templateName: 'game',

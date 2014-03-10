@@ -5592,7 +5592,16 @@ th.hide-for-touch {
     left: 0;
     top: 0;
     right: 0;
-    bottom: 0; }
+    bottom: 0;
+    text-align: center; }
+    .promo > ._details > ._name {
+      font-size: 1em;
+      color: #ffffff;
+      max-width: 80%;
+      margin: 0 auto;
+      margin-top: 15%; }
+    .promo > ._details > ._description {
+      font-size: 1em; }
 
 @media only screen {
   .promo.promo-featured {
@@ -5602,6 +5611,11 @@ th.hide-for-touch {
     width: 66.6666%; }
     .promo.promo-featured + .promo {
       float: right; } }
+.promo.promo-featured > ._details > ._name {
+  font-size: 2em; }
+
+.promo > ._details {
+  background-color: rgba(0, 0, 0, 0.8); }
 
 .layout-featured {
   max-width: 1200px;
@@ -5663,6 +5677,17 @@ th.hide-for-touch {
     float: right; }
   .game .module.sale_btn {
     float: right; }
+
+.proxime ._steam {
+  background: url("https://humblebundle-a.akamaihd.net/static/hashed/313805fd9056bb1f241cce21cb1f0ad97ee929bc.svg") no-repeat; }
+.proxime ._drmFree {
+  background: url("https://humblebundle-a.akamaihd.net/static/hashed/829e0fbf7d701df9d4ec1c994a3bb191af450aa6.svg") no-repeat; }
+.proxime ._mac {
+  background: url("https://humblebundle-a.akamaihd.net/static/hashed/bb2633566c22a516455e07604953039602046743.svg") no-repeat; }
+.proxime ._windows {
+  background: url("https://humblebundle-a.akamaihd.net/static/hashed/b06cf385e350754604d527544d92aef657989318.svg") no-repeat; }
+.proxime ._linux {
+  background: url("https://humblebundle-a.akamaihd.net/static/hashed/b95a7fc482bd8fe5dc3c64d99dc2fdc66b7ed216.svg") no-repeat; }
 
 .reveal-modal .close-reveal_modal {
   font-size: 1.375rem;

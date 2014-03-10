@@ -3,7 +3,7 @@ Store.PaginationPageComponent = Em.Component.extend({
     return this.get('currentPage') === this.get('page');
   }).property('currentPage', 'page'),
   tagName: 'li',
-  classNameBindings: 'isCurrent:disabled',
+  classNameBindings: 'isCurrent:current',
 
   actions: {
     pageClicked: function() {
@@ -16,16 +16,18 @@ Store.PaginationPageComponent = Em.Component.extend({
 
 
 Store.PaginationLinksComponent = Em.Component.extend({
-  hasPrevious: (function() {
+  hasPrevious: function() {
     return this.get('page') > 1;
-  }).property('page'),
-  hasNext: (function() {
+  }.property('page'),
+
+  hasNext: function() {
     return this.get('page') + 1 < this.get('pages');
-  }).property('page', 'pages'),
+  }.property('page', 'pages'),
+
   showPagination: Em.computed.gt('pages', 1),
   lastPage: Em.computed.alias('pages'),
 
-visiblePages: (function() {
+  visiblePages: function() {
     var finish, limit, page, pages, start, _i, _ref, _results;
     pages = this.get('pages');
     page = this.get('page');
@@ -37,6 +39,7 @@ visiblePages: (function() {
       return start + limit - 1;
     };
     start = page - parseInt(limit / 2);
+
     if (finish(start, limit) > pages) {
       start = pages - limit + 1;
     }
@@ -48,15 +51,16 @@ visiblePages: (function() {
       for (var _i = start, _ref = finish(start, limit); start <= _ref ? _i <= _ref : _i >= _ref; start <= _ref ? _i++ : _i--){ _results.push(_i); }
       return _results;
     }).apply(this);
-  }).property('page', 'pages'),
+  }.property('page', 'pages'),
 
 
-  showBeforeElipsis: (function() {
+  showBeforeEllipsis: function() {
     return this.get('visiblePages.firstObject') > 3;
-  }).property('visiblePages.[]'),
-  showAfterElipsis: (function() {
+  }.property('visiblePages.[]'),
+
+  showAfterEllipsis: function() {
     return Math.abs(this.get('lastPage') - this.get('visiblePages.lastObject')) > 2;
-  }).property('visiblePages.[]', 'lastPage'),
+  }.property('visiblePages.[]', 'lastPage'),
 
   actions: {
     goToNextPage: function() {

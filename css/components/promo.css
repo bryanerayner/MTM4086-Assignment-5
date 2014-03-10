@@ -133,7 +133,16 @@ select {
     left: 0;
     top: 0;
     right: 0;
-    bottom: 0; }
+    bottom: 0;
+    text-align: center; }
+    .promo > ._details > ._name {
+      font-size: 1em;
+      color: #ffffff;
+      max-width: 80%;
+      margin: 0 auto;
+      margin-top: 15%; }
+    .promo > ._details > ._description {
+      font-size: 1em; }
 
 @media only screen {
   .promo.promo-featured {
@@ -143,3 +152,8 @@ select {
     width: 66.6666%; }
     .promo.promo-featured + .promo {
       float: right; } }
+.promo.promo-featured > ._details > ._name {
+  font-size: 2em; }
+
+.promo > ._details {
+  background-color: rgba(0, 0, 0, 0.8); }

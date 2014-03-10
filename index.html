@@ -44,29 +44,27 @@
 </script>
 
   <script type="text/x-handlebars" data-template-name = "components/pagination-links">
-    {{# if showPagination}}
-    <div class="pagination pagination-centered">
-      <ul>
-        <li {{bind-attr class="hasPrevious::disabled"}}>
-          <a {{action goToPreviousPage}}>&laquo;</a>
-        </li>
-        {{#if showBeforeEllipsis}}
-          {{pagination-page page=1 currentPage=page}}
-          <li class="disabled"><a>&hellip;</a></li>
-        {{/if}}
-        {{#each pageNumber in visiblePages}}
-          {{pagination-page page=pageNumber currentPage=page}}
-        {{/each}}
-        {{#if showAfterEllipsis}}
-          <li class="disabled"><a>&hellip;</a></li>
-          {{pagination-page page=lastPage currentPage=page}}
-        {{/if}}
-        <li {{bind-attr class="hasNext::disabled"}}>
-          <a {{action goToNextPage}}>
-            &raquo;
-          </a>
-      </ul>
-    </div>
+    {{#if showPagination}}
+    <ul class = "pagination">
+      <li {{bind-attr class="hasPrevious::unavailable"}}>
+        <a {{action "goToPreviousPage"}}>&laquo;</a>
+      </li>
+      {{#if showBeforeEllipsis}}
+        {{pagination-page page=1 currentPage=page}}
+        <li class="unavailable"><a>&hellip;</a></li>
+      {{/if}}
+      {{#each pageNumber in visiblePages}}
+        {{pagination-page page=pageNumber currentPage=page}}
+      {{/each}}
+      {{#if showAfterEllipsis}}
+        <li class="unavailable"><a>&hellip;</a></li>
+        {{pagination-page page=lastPage currentPage=page}}
+      {{/if}}
+      <li {{bind-attr class="hasNext::unavailable"}}>
+        <a {{action "goToNextPage"}}>
+          &raquo;
+        </a>
+    </ul>
   {{/if}}
   </script>
 
@@ -93,7 +91,7 @@
 
     <div class="show-on-hover _details">
       <h2 class="_name">{{game.name}}</h2>
-      {{partial "proxime"}}
+    {{proxime-icons proxime = game.proxime}}
       {{#link-to 'game' game.id class = "_description"}}View trailer &amp; description...{{/link-to}}
     </div>
 
@@ -110,7 +108,9 @@
     </span>
   </script>
 
-  <script type = "text/x-handlebars" data-template-name = "proxime">
+  <script type = "text/x-handlebars" data-template-name = "components/proxime-icons">
+  {{log proxime}}
+  {{#with proxime}}
     <div class="module proxime">
       {{#if steam}}
       <div class="_steam">Steam</div>
@@ -128,10 +128,12 @@
       <div class="_linux">Linux</div>
       {{/if}}
     </div>
+    {{/with}}
   </script>
 	
   <script type = "text/x-handlebars" data-template-name = "games">
     
+
 
 <div class = "row layout-gameList">
   <div class="small-12 medium-9 medium-push-3 columns">
@@ -147,7 +149,8 @@
   </div>
 
   <div class="small-12 medium-3 medium-pull-9 columns">
-    
+    <h4>Search:</h4>
+    {{input value=controller.filterText placeholder = "Game name..."}}
   </div>
   
 </div>
@@ -194,7 +197,7 @@
         <h5 class = "_game-name">{{game.name}}</h5>
       </div>
       <div class="small-4 columns">
-          {{partial "proxime"}}
+          {{proxime-icons proxime = proxime}}
           {{btn-price onSale = game.onSale price = game.price salePrice = game.price_sale}}
         </div>
       </div>
