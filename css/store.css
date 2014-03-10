@@ -5663,3 +5663,36 @@ th.hide-for-touch {
     float: right; }
   .game .module.sale_btn {
     float: right; }
+
+.reveal-modal .close-reveal_modal {
+  font-size: 1.375rem;
+  line-height: 1;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.6875rem;
+  color: #aaaaaa;
+  font-weight: bold;
+  cursor: pointer; }
+
+.game {
+  width: 100%; }
+  .game ._game-thumb {
+    line-height: 0;
+    display: inline-block;
+    border: solid 4px white;
+    max-width: 100%;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2);
+    width: 8.33333%;
+    float: left; }
+    .game ._game-thumb:hover, .game ._game-thumb:focus {
+      -webkit-box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
+      box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5); }
+  .game ._game-name {
+    width: 100%;
+    float: left;
+    margin: 0; }
+  .game .module.proxime {
+    float: right; }
+  .game .module.sale_btn {
+    float: right; }

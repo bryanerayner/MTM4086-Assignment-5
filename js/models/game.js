@@ -10,6 +10,7 @@ Store.Game = DS.Model.extend({
 	       img_Lg: DS.attr('string'),
 		   img_Sm: DS.attr('string'),
 		url_video: DS.attr('string'),
+		url_photo: DS.attr('string'),
 	url_developer: DS.attr('string'),
 		   
 			price: DS.attr('number'),
@@ -43,10 +44,11 @@ Store.Game.FIXTURES = [
 		price: 19.99,
 		price_sale:2.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=yQQNNhCLIrM',
+		url_video:'https://www.youtube.com/embed/yQQNNhCLIrM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -66,10 +68,11 @@ Store.Game.FIXTURES = [
 		price: 49.99,
 		price_sale: 29.99,
 		developer:'Uber Entertainment',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=ZE8QgqCiV8Q',
+		url_video:'https://www.youtube.com/embed/ZE8QgqCiV8Q',
+		url_photo:null,
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -88,10 +91,11 @@ Store.Game.FIXTURES = [
 		price: 14.99,
 		price_sale: 9.99,
 		developer:'Terrible Posture Games',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=lE8dfwSRsW0',
+		url_video:'https://www.youtube.com/embed/lE8dfwSRsW0',
+		url_photo:null,
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -109,10 +113,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 0.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=2bx76Oj54mM',
+		url_video:'https://www.youtube.com/embed/2bx76Oj54mM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -132,10 +137,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 8.99,
 		developer:'Vlambeer',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=VauCrcG2wIU',
+		url_video:'https://www.youtube.com/embed/VauCrcG2wIU',
+		url_photo:null,
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -155,10 +161,11 @@ Store.Game.FIXTURES = [
 		price: 19.99,
 		price_sale:2.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=yQQNNhCLIrM',
+		url_video:'https://www.youtube.com/embed/yQQNNhCLIrM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -178,10 +185,11 @@ Store.Game.FIXTURES = [
 		price: 49.99,
 		price_sale: 29.99,
 		developer:'Uber Entertainment',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=ZE8QgqCiV8Q',
+		url_video:'https://www.youtube.com/embed/ZE8QgqCiV8Q',
+		url_photo:null,
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -200,10 +208,11 @@ Store.Game.FIXTURES = [
 		price: 14.99,
 		price_sale: 9.99,
 		developer:'Terrible Posture Games',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=lE8dfwSRsW0',
+		url_video:'https://www.youtube.com/embed/lE8dfwSRsW0',
+		url_photo:null,
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -221,10 +230,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 0.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=2bx76Oj54mM',
+		url_video:'https://www.youtube.com/embed/2bx76Oj54mM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -244,10 +254,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 8.99,
 		developer:'Vlambeer',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=VauCrcG2wIU',
+		url_video:'https://www.youtube.com/embed/VauCrcG2wIU',
+		url_photo:null,
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -267,10 +278,11 @@ Store.Game.FIXTURES = [
 		price: 19.99,
 		price_sale:2.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=yQQNNhCLIrM',
+		url_video:'https://www.youtube.com/embed/yQQNNhCLIrM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -290,10 +302,11 @@ Store.Game.FIXTURES = [
 		price: 49.99,
 		price_sale: 29.99,
 		developer:'Uber Entertainment',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=ZE8QgqCiV8Q',
+		url_video:'https://www.youtube.com/embed/ZE8QgqCiV8Q',
+		url_photo:null,
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -312,10 +325,11 @@ Store.Game.FIXTURES = [
 		price: 14.99,
 		price_sale: 9.99,
 		developer:'Terrible Posture Games',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=lE8dfwSRsW0',
+		url_video:'https://www.youtube.com/embed/lE8dfwSRsW0',
+		url_photo:null,
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -333,10 +347,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 0.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=2bx76Oj54mM',
+		url_video:'https://www.youtube.com/embed/2bx76Oj54mM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -356,10 +371,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 8.99,
 		developer:'Vlambeer',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=VauCrcG2wIU',
+		url_video:'https://www.youtube.com/embed/VauCrcG2wIU',
+		url_photo:null,
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -379,10 +395,11 @@ Store.Game.FIXTURES = [
 		price: 19.99,
 		price_sale:2.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=yQQNNhCLIrM',
+		url_video:'https://www.youtube.com/embed/yQQNNhCLIrM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -402,10 +419,11 @@ Store.Game.FIXTURES = [
 		price: 49.99,
 		price_sale: 29.99,
 		developer:'Uber Entertainment',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=ZE8QgqCiV8Q',
+		url_video:'https://www.youtube.com/embed/ZE8QgqCiV8Q',
+		url_photo:null,
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -424,10 +442,11 @@ Store.Game.FIXTURES = [
 		price: 14.99,
 		price_sale: 9.99,
 		developer:'Terrible Posture Games',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=lE8dfwSRsW0',
+		url_video:'https://www.youtube.com/embed/lE8dfwSRsW0',
+		url_photo:null,
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -445,10 +464,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 0.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=2bx76Oj54mM',
+		url_video:'https://www.youtube.com/embed/2bx76Oj54mM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -468,10 +488,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 8.99,
 		developer:'Vlambeer',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=VauCrcG2wIU',
+		url_video:'https://www.youtube.com/embed/VauCrcG2wIU',
+		url_photo:null,
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -491,10 +512,11 @@ Store.Game.FIXTURES = [
 		price: 19.99,
 		price_sale:2.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=yQQNNhCLIrM',
+		url_video:'https://www.youtube.com/embed/yQQNNhCLIrM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -514,10 +536,11 @@ Store.Game.FIXTURES = [
 		price: 49.99,
 		price_sale: 29.99,
 		developer:'Uber Entertainment',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=ZE8QgqCiV8Q',
+		url_video:'https://www.youtube.com/embed/ZE8QgqCiV8Q',
+		url_photo:null,
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -536,10 +559,11 @@ Store.Game.FIXTURES = [
 		price: 14.99,
 		price_sale: 9.99,
 		developer:'Terrible Posture Games',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=lE8dfwSRsW0',
+		url_video:'https://www.youtube.com/embed/lE8dfwSRsW0',
+		url_photo:null,
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -557,10 +581,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 0.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=2bx76Oj54mM',
+		url_video:'https://www.youtube.com/embed/2bx76Oj54mM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -580,10 +605,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 8.99,
 		developer:'Vlambeer',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=VauCrcG2wIU',
+		url_video:'https://www.youtube.com/embed/VauCrcG2wIU',
+		url_photo:null,
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -603,10 +629,11 @@ Store.Game.FIXTURES = [
 		price: 19.99,
 		price_sale:2.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=yQQNNhCLIrM',
+		url_video:'https://www.youtube.com/embed/yQQNNhCLIrM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -626,10 +653,11 @@ Store.Game.FIXTURES = [
 		price: 49.99,
 		price_sale: 29.99,
 		developer:'Uber Entertainment',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=ZE8QgqCiV8Q',
+		url_video:'https://www.youtube.com/embed/ZE8QgqCiV8Q',
+		url_photo:null,
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -648,10 +676,11 @@ Store.Game.FIXTURES = [
 		price: 14.99,
 		price_sale: 9.99,
 		developer:'Terrible Posture Games',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=lE8dfwSRsW0',
+		url_video:'https://www.youtube.com/embed/lE8dfwSRsW0',
+		url_photo:null,
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -669,10 +698,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 0.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=2bx76Oj54mM',
+		url_video:'https://www.youtube.com/embed/2bx76Oj54mM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -692,10 +722,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 8.99,
 		developer:'Vlambeer',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=VauCrcG2wIU',
+		url_video:'https://www.youtube.com/embed/VauCrcG2wIU',
+		url_photo:null,
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -715,10 +746,11 @@ Store.Game.FIXTURES = [
 		price: 19.99,
 		price_sale:2.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=yQQNNhCLIrM',
+		url_video:'https://www.youtube.com/embed/yQQNNhCLIrM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -738,10 +770,11 @@ Store.Game.FIXTURES = [
 		price: 49.99,
 		price_sale: 29.99,
 		developer:'Uber Entertainment',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=ZE8QgqCiV8Q',
+		url_video:'https://www.youtube.com/embed/ZE8QgqCiV8Q',
+		url_photo:null,
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -760,10 +793,11 @@ Store.Game.FIXTURES = [
 		price: 14.99,
 		price_sale: 9.99,
 		developer:'Terrible Posture Games',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=lE8dfwSRsW0',
+		url_video:'https://www.youtube.com/embed/lE8dfwSRsW0',
+		url_photo:null,
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -781,10 +815,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 0.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=2bx76Oj54mM',
+		url_video:'https://www.youtube.com/embed/2bx76Oj54mM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -804,10 +839,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 8.99,
 		developer:'Vlambeer',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=VauCrcG2wIU',
+		url_video:'https://www.youtube.com/embed/VauCrcG2wIU',
+		url_photo:null,
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -827,10 +863,11 @@ Store.Game.FIXTURES = [
 		price: 19.99,
 		price_sale:2.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=yQQNNhCLIrM',
+		url_video:'https://www.youtube.com/embed/yQQNNhCLIrM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -850,10 +887,11 @@ Store.Game.FIXTURES = [
 		price: 49.99,
 		price_sale: 29.99,
 		developer:'Uber Entertainment',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=ZE8QgqCiV8Q',
+		url_video:'https://www.youtube.com/embed/ZE8QgqCiV8Q',
+		url_photo:null,
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -872,10 +910,11 @@ Store.Game.FIXTURES = [
 		price: 14.99,
 		price_sale: 9.99,
 		developer:'Terrible Posture Games',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=lE8dfwSRsW0',
+		url_video:'https://www.youtube.com/embed/lE8dfwSRsW0',
+		url_photo:null,
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -893,10 +932,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 0.99,
 		developer:'Frozenbyte',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=2bx76Oj54mM',
+		url_video:'https://www.youtube.com/embed/2bx76Oj54mM',
+		url_photo:null,
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,
@@ -916,10 +956,11 @@ Store.Game.FIXTURES = [
 		price: 9.99,
 		price_sale: 8.99,
 		developer:'Vlambeer',
-		url_video:'https://www.youtube.com/watch?feature=player_embedded&v=VauCrcG2wIU',
+		url_video:'https://www.youtube.com/embed/VauCrcG2wIU',
+		url_photo:null,
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
-		requirements:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil, dolorum, mollitia repellendus impedit enim repudiandae harum odio laudantium nostrum qui excepturi aperiam iusto eum nulla provident a vero. Numquam, aliquam.',
+		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
 		specs:
 		{
 			windows:true,

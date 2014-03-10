@@ -19,7 +19,6 @@ Store.Router.map(function() {
 });
 
 
-
 Store.IndexRoute = Em.Route.extend({
   model: function(){
 
@@ -149,6 +148,37 @@ Store.GamesController = Em.ArrayController.extend(Store.PaginatableMixin, {
 
 Store.GameController = Em.ObjectController.extend({});
 
+Store.GameView = Em.View.extend({
+  templateName: 'game',
+
+  didInsertElement: function()
+  {
+    // this.$('.reveal-modal').foundation('reveal', 'open');
+    this.send('openModal');
+  },
+
+  actions:{
+    openModal:function(){
+      jQuery(this.$('[data-reveal]')).addClass('open').css({
+        visibility:'visible',
+        display:'block',
+        top:'88px',
+        opacity:1
+      });
+
+    },
+    closeModal:function(){
+      jQuery(this.$('[data-reveal]')).removeClass('open').css({
+        visibility:'',
+        display:'',
+        top:'',
+        opacity:''
+      });
+      this.get('controller').transitionToRoute('index');
+    }
+  }
+});
+
 Handlebars.registerHelper("debug", function(optionalValue) {
   console.log("Current Context");
   console.log("====================");
@@ -171,5 +201,25 @@ Store.GamePromotionComponent = Ember.Component.extend({
 
 Store.GamePreviewComponent = Ember.Component.extend({
   tagName: 'div',
-  classNames: ['game', 'clearfix']
+  classNames: ['game', 'clearfix'],
+  showDetails:false,
+  actions:
+  {
+    showDetails:function()
+    {
+      this.setProperties({
+        showDetails:true
+      });
+    },
+    hideDetails:function()
+    {
+      this.setProperties({
+        showDetails:false
+      });
+    },
+    toggleDetails:function()
+    {
+      this.toggleProperty('showDetails');
+    }
+  }
 });

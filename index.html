@@ -157,42 +157,108 @@
   </script>
 
 <script type = "text/x-handlebars" data-template-name = "game">
-Dis Game has a name, its names not Game, its {{name}}
+  <div class="reveal-modal" data-reveal>
+    {{game-details-bar game = model displayPanel = false}}
+    {{game-details game = model }}    
+    <a {{action 'closeModal' target="view"}} class="close-reveal_modal">&#215;</a>
+
+  </div>
 </script>
 
 
+
+
   <script type = "text/x-handlebars" data-template-name = "components/game-preview">
-    {{#with game}}
+    
       <article class="game clearfix">
-        <div class="_game-thumb">
-          <img {{bind-attr src="img_Sm"}} alt="">
+        <div  class="_game-thumb">
+          <img {{bind-attr src="game.img_Sm"}} alt="" >
         </div>  
-        <div class="small-11 columns">
-          <div class="panel clearfix">
-          <div class="small-8 columns">
-            <h5 class = "_game-name">{{name}}</h5>
-          </div>
-          <div class="small-4 columns">
-              {{partial "proxime"}}
-              {{btn-price onSale = onSale price = price salePrice = price_sale}}
-            </div>
-          </div>
+        <div {{action "toggleDetails"}} class="small-11 columns">
+          {{game-details-bar game = game}}
+          {{#if showDetails}}
+            {{game-details game = game}}
+          {{/if}}
+
         </div>
   
 
       </article>
 
-    {{/with}}
+    
+  </script>
+
+  <script type = "text/x-handlebars" data-template-name = "components/game-details-bar">
+      <div {{bind-attr class = ":clearfix displayPanel:panel"}}>
+      <div class="small-8 columns">
+        <h5 class = "_game-name">{{game.name}}</h5>
+      </div>
+      <div class="small-4 columns">
+          {{partial "proxime"}}
+          {{btn-price onSale = game.onSale price = game.price salePrice = game.price_sale}}
+        </div>
+      </div>
+
+  </script>
+
+  <script type = "text/x-handlebars" data-template-name = "components/game-details">
+    <div class="row">
+    {{#if showDetails}}
+      <div class="small-12 columns">
+        {{#if game.url_photo}}
+          <img {{bind-attr src = "game.url_photo"}}>
+        {{/if}}
+        {{#if game.url_video}}
+          <div class="flex-video">
+            <iframe src = "{{unbound game.url_video}}" width="560" height="315" frameborder="0"></iframe>
+          </div>
+        {{/if}}
+      </div>
+      <div class="small-8 columns">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, quasi, animi, accusamus, iure corporis sequi repellendus cum harum cupiditate est ea pariatur maiores alias tenetur quis ipsum quam vitae expedita.</p>
+      </div>
+      <div class="small-4 columns">
+        
+        <h4 class = "_label">Develoer:</h4>
+        {{#if game.url_developer}}
+        <a class="_link" {{bind-attr href = "game.url_developer"}}>{{game.developer}}</a>
+        {{else}}
+        <p class="_link">{{game.developer}}</p>
+        {{/if}}
+        <h4 class = "_label">More Information:</h4>
+        <a {{action "showSystemRequirements"}} href="_link">System Requirements</a>
+      </div>
+    {{else}}
+      {{#if showSystemRequirements}}
+        <a {{action "showDetails"}} class = "_backLink">&lt;&lt; Game Details</a>
+        <div class="small-12 columns">
+          <h3>System Requirements:</h3>
+          <p>{{game.requirements}}</p>
+        </div>
+
+      {{/if}}
+
+    {{/if}}
+    </div>
+  </script>
+  
+
+	<script src="bower_components/jquery/jquery.js"></script>
+  <script src="bower_components/foundation/js/vendor/fastclick.js"></script>
+  <script type = "text/javascript" src = "bower_components/foundation/js/foundation.js"></script>
+  <script>
+    // $(document).foundation();
   </script>
 
 
-	<script src="bower_components/jquery/jquery.min.js"></script>
 	<script src="bower_components/handlebars/handlebars.js"></script>
 	<script src="bower_components/ember/ember.js"></script>
 	<script src="bower_components/ember-data/ember-data.js"></script>
 
   <script src="js/application.js"></script>
   <script src="js/components/pagination.js"></script>
+  <script src="js/components/game-details.js"></script>
+  <script src="js/components/game-details-bar.js"></script>
   <script src="js/components/btn-price.js"></script>
   <script src="js/models/game.js"></script>
   <script src="js/models/promo.js"></script>
