@@ -9,7 +9,10 @@ Store.PaginatableMixin = Em.Mixin.create({
     var start = (page - 1) * perPage;
     var end = page * perPage;
 
-    return this.get('paginatedSource').slice(start, end);
+    return Em.ArrayProxy.create( {
+      content: this.get('paginatedSource').slice(start, end),
+      lookupItemController: this.lookupItemController
+    });
   }).property('paginatedSource.[]', 'page', 'perPage'),
 
   pages: Em.computed(function() {

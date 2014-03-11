@@ -5673,21 +5673,26 @@ th.hide-for-touch {
     width: 100%;
     float: left;
     margin: 0; }
-  .game .module.proxime {
-    float: right; }
   .game .module.sale_btn {
     float: right; }
 
-.proxime ._steam {
-  background: url("https://humblebundle-a.akamaihd.net/static/hashed/313805fd9056bb1f241cce21cb1f0ad97ee929bc.svg") no-repeat; }
-.proxime ._drmFree {
-  background: url("https://humblebundle-a.akamaihd.net/static/hashed/829e0fbf7d701df9d4ec1c994a3bb191af450aa6.svg") no-repeat; }
-.proxime ._mac {
-  background: url("https://humblebundle-a.akamaihd.net/static/hashed/bb2633566c22a516455e07604953039602046743.svg") no-repeat; }
-.proxime ._windows {
-  background: url("https://humblebundle-a.akamaihd.net/static/hashed/b06cf385e350754604d527544d92aef657989318.svg") no-repeat; }
-.proxime ._linux {
-  background: url("https://humblebundle-a.akamaihd.net/static/hashed/b95a7fc482bd8fe5dc3c64d99dc2fdc66b7ed216.svg") no-repeat; }
+.proxime {
+  float: left; }
+  .proxime ._icn {
+    height: 17px;
+    float: left;
+    width: 14px; }
+  .proxime ._icn._steam {
+    background: url("https://humblebundle-a.akamaihd.net/static/hashed/313805fd9056bb1f241cce21cb1f0ad97ee929bc.svg") no-repeat; }
+  .proxime ._icn._drmFree {
+    background: url("https://humblebundle-a.akamaihd.net/static/hashed/829e0fbf7d701df9d4ec1c994a3bb191af450aa6.svg") no-repeat; }
+  .proxime ._icn._mac {
+    background: url("https://humblebundle-a.akamaihd.net/static/hashed/bb2633566c22a516455e07604953039602046743.svg") no-repeat; }
+  .proxime ._icn._windows {
+    background: url("https://humblebundle-a.akamaihd.net/static/hashed/b06cf385e350754604d527544d92aef657989318.svg") no-repeat; }
+  .proxime ._icn._linux {
+    background: url("https://humblebundle-a.akamaihd.net/static/hashed/b95a7fc482bd8fe5dc3c64d99dc2fdc66b7ed216.svg") no-repeat;
+    width: 14px; }
 
 .reveal-modal .close-reveal_modal {
   font-size: 1.375rem;
@@ -5717,7 +5722,5 @@ th.hide-for-touch {
     width: 100%;
     float: left;
     margin: 0; }
-  .game .module.proxime {
-    float: right; }
   .game .module.sale_btn {
     float: right; }

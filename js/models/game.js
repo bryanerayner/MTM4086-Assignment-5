@@ -32,7 +32,6 @@ Store.Game = DS.Model.extend({
 });
 
 
-
 Store.Game.FIXTURES = [
 	{
 		id:1,
@@ -49,14 +48,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:2,
@@ -73,13 +71,12 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:3,
@@ -96,12 +93,11 @@ Store.Game.FIXTURES = [
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:4,
@@ -118,14 +114,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:5,
@@ -142,14 +137,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:6,
@@ -166,14 +160,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:7,
@@ -190,13 +183,12 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:8,
@@ -213,12 +205,11 @@ Store.Game.FIXTURES = [
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:9,
@@ -235,14 +226,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:10,
@@ -259,14 +249,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:11,
@@ -283,14 +272,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:12,
@@ -307,13 +295,12 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:13,
@@ -330,12 +317,11 @@ Store.Game.FIXTURES = [
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:14,
@@ -352,14 +338,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:15,
@@ -376,14 +361,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:16,
@@ -400,14 +384,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:17,
@@ -424,13 +407,12 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:18,
@@ -447,12 +429,11 @@ Store.Game.FIXTURES = [
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:19,
@@ -469,14 +450,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:20,
@@ -493,14 +473,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:21,
@@ -517,14 +496,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:22,
@@ -541,13 +519,12 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:23,
@@ -564,12 +541,11 @@ Store.Game.FIXTURES = [
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:24,
@@ -586,14 +562,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:25,
@@ -610,14 +585,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:26,
@@ -634,14 +608,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:27,
@@ -658,13 +631,12 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:28,
@@ -681,12 +653,11 @@ Store.Game.FIXTURES = [
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:29,
@@ -703,14 +674,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:30,
@@ -727,14 +697,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:31,
@@ -751,14 +720,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:32,
@@ -775,13 +743,12 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:33,
@@ -798,12 +765,11 @@ Store.Game.FIXTURES = [
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:34,
@@ -820,14 +786,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:35,
@@ -844,14 +809,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:36,
@@ -868,14 +832,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:37,
@@ -892,13 +855,12 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.uberent.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:38,
@@ -915,12 +877,11 @@ Store.Game.FIXTURES = [
 		url_developer:'http://blankslatejoe.tumblr.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:39,
@@ -937,14 +898,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://frozenbyte.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	},
 	{
 		id:40,
@@ -961,14 +921,13 @@ Store.Game.FIXTURES = [
 		url_developer:'http://www.vlambeer.com/',
 		description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, maiores, recusandae quisquam qui autem adipisci incidunt modi! Eius, delectus, pariatur, neque omnis repellendus quidem at veniam architecto a voluptas voluptatem.',
 		requirements:'You need a sweet computer to play this game. If you want a new one, use this as an excuse to go buy a new one. Because that\'s the only real reason you need one, right?',
-		specs:
-		{
+		
 			windows:true,
 			mac:true,
 			linux:true,
 			drmFree:true,
 			steam:true
-		}
+		
 	}
 
 ];

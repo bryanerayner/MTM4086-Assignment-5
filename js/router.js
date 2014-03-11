@@ -91,6 +91,20 @@ Store.PromosController = Em.ArrayController.extend({
 });
 
 Store.PromoController = Em.ObjectController.extend({
+  needs:['game'],
+
+  proxime:function()
+  {
+    var names = ["steam", "drmFree", "linux", "windows", "mac"];
+    var stuff = {};
+    var game = this.get("game");
+    for (var i = 0, ii = names.length; i < ii; i++)
+    {
+      stuff[names[i]] = game.get(names[i]);
+    }
+    
+    return stuff;
+  }.property("game.steam", "game.drmFree", "game.linux", "game.windows", "game.mac"),
 
 });
 
@@ -128,9 +142,21 @@ Store.GameRoute = Em.Route.extend({
 })
 
 Store.GamesController = Em.ArrayController.extend(Store.PaginatableMixin, {
-
+  itemController:'game',
   page:1,
   perPage:10,
+
+  platformChoices:[
+    {name:"Windows",
+    property:"windows"},
+    {name:"Mac",
+    property:"mac"},
+    {name:"Steam",
+    property:"steam"},
+    {name:"Linux",
+    property:"linux"}
+  ],
+  selectedPlatform:0,
 
   filterText:"",
 
@@ -146,9 +172,11 @@ Store.GamesController = Em.ArrayController.extend(Store.PaginatableMixin, {
     }
 
     var filterRegex = new RegExp(filterRegexString);
-
-    return content.filter(function(item) {
+    return Em.ArrayProxy.create( {
+      content: Ember.A(content.filter(function(item) {
         return (!!item.get("name").toLowerCase().match(filterRegex));
+      })),
+      lookupItemController: this.lookupItemController
     });
   }).property('content.@each', 'filterText'),
 
