@@ -147,21 +147,40 @@ Store.GamesController = Em.ArrayController.extend(Store.PaginatableMixin, {
   perPage:10,
 
   platformChoices:[
-    {name:"Windows",
-    property:"windows"},
-    {name:"Mac",
-    property:"mac"},
-    {name:"Steam",
-    property:"steam"},
-    {name:"Linux",
-    property:"linux"}
+    {
+      name:"All",
+      property:null
+    },
+    {
+      name:"Windows",
+      property:"windows"
+    },
+    {
+      name:"Mac",
+      property:"mac"
+    },
+    {
+      name:"Steam",
+      property:"steam"
+    },
+    {
+      name:"Linux",
+      property:"linux"
+    }
   ],
   selectedPlatform:0,
+
+  selectedPlatformChoice:function()
+  {
+    return this.get('platformChoices')[this.get('selectedPlatform')];
+  }.property('platformChoices.@each', 'selectedPlatform'),
 
   filterText:"",
 
   filteredContent: Em.computed(function() {
     var content = this.get('content');
+
+    // Prepare to match on names
     var filterText = this.get('filterText').toLowerCase();
 
     var filterRegexString = "";
@@ -172,13 +191,27 @@ Store.GamesController = Em.ArrayController.extend(Store.PaginatableMixin, {
     }
 
     var filterRegex = new RegExp(filterRegexString);
+
+    // Prepare to match on system
+    
+    var selectedProperty = this.get('selectedPlatformChoice').property;
+
     return Em.ArrayProxy.create( {
       content: Ember.A(content.filter(function(item) {
-        return (!!item.get("name").toLowerCase().match(filterRegex));
+
+        var nameMatch = (!!item.get("name").toLowerCase().match(filterRegex));
+
+        var systemMatch = true;
+        if (selectedProperty)
+        {
+          systemMatch = !!item.get(selectedProperty);
+        }
+
+        return nameMatch && systemMatch;
       })),
       lookupItemController: this.lookupItemController
     });
-  }).property('content.@each', 'filterText'),
+  }).property('content.@each', 'filterText', 'selectedPlatformChoice'),
 
   paginatedSource:Em.computed(function()
   {

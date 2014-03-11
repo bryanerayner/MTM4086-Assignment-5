@@ -91,7 +91,7 @@
 
     <div class="show-on-hover _details">
       <h2 class="_name">{{promo.game.name}}</h2>
-      {{log promo.proxime}}
+      
     {{proxime-icons proxime = promo.proxime}}
       {{#link-to 'game' promo.game.id class = "_description"}}View trailer &amp; description...{{/link-to}}
     </div>
@@ -149,8 +149,13 @@
   <div class="small-12 medium-3 medium-pull-9 columns">
     <h4>Search:</h4>
     {{input value=controller.filterText placeholder = "Game name..."}}
-    {{select-list list = controller.platformChoices selectedIndex = controller.selectedPlatform}}
-    <h2>The controllers selected platform is: {{controller.selectedPlatform}}</h2>
+    <h4>Platform:</h4>
+    {{#select-list list = controller.platformChoices selectedIndex = controller.selectedPlatform}}
+      <p>
+      {{#if selected}}<strong>{{item.name}}</strong>{{else}}{{item.name}}{{/if}}
+      </p>
+    {{/select-list}}
+
   </div>
   
 </div>
@@ -172,17 +177,22 @@
   <script type = "text/x-handlebars" data-template-name = "components/select-list">
   {{#each item in list}}
     <div>
-      {{select-list-item item=item selectedIndex = selectedIndex index = _view.contentIndex}}
+      {{#select-list-item item=item selectedIndex = selectedIndex index = _view.contentIndex}}
+        {{yield}}
+      {{/select-list-item}}
     </div>
   {{/each}}
   </script>
 
   <script type = "text/x-handlebars" data-template-name = "components/select-list-item">
-    <p>Index: {{index}}</p>
-    <p>item: {{item}}</p>
-    <p>selectedIndex: {{selectedIndex}}</p>
-    <p>selected: {{selected}}</p>
-    <button {{action "select"}}>Select Me</button>
+  <div {{action "select"}}>
+  {{yield}}
+  </div>
+    {{!--<p>Index: {{index}}</p>--}}
+    {{!--<p>item: {{item}}</p>--}}
+    {{!--<p>selectedIndex: {{selectedIndex}}</p>--}}
+    {{!--<p>selected: {{selected}}</p>--}}
+    {{!--<button {{action "select"}}>Select Me</button>--}}
   </script>
 
   <script type = "text/x-handlebars" data-template-name = "components/game-preview">
@@ -207,13 +217,15 @@
 
   <script type = "text/x-handlebars" data-template-name = "components/game-details-bar">
       <div {{bind-attr class = ":clearfix displayPanel:panel"}}>
-      <div class="small-8 columns">
+      <div class="small-12 medium-9 large-7 columns">
         <h5 class = "_game-name">{{game.name}}</h5>
       </div>
-      <div class="small-4 columns">
+      <div class="small-6 medium-3 large-3 columns">
           {{proxime-icons proxime = game.proxime}}
+      </div>
+      <div class ="small-6 medium-12 large-2 columns">
           {{btn-price onSale = game.onSale price = game.price salePrice = game.price_sale}}
-        </div>
+       </div>
       </div>
 
   </script>
