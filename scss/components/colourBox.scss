@@ -1,0 +1,66 @@
+.colourBox
+{
+
+
+	&[type=checkbox]
+	{
+		display:none;
+	}
+
+	&[type=checkbox] + label.colourBox
+	{
+		width:percentage(1/8);
+		height:100%;
+		background-color:#000;
+		min-width:30px; min-height:30px;
+		margin:3px auto;
+		float:left;
+
+		display:block;
+
+
+		&.colourBox-black
+		{
+			background-color:black;	
+		}
+		&.colourBox-white
+		{
+			background-color: white;	
+			border:1px solid #000;
+		}
+		&.colourBox-red
+		{
+			background-color: red;	
+		}
+		&.colourBox-purple
+		{
+			background-color: purple;	
+		}
+		&.colourBox-blue
+		{
+			background-color: blue;	
+		}
+		&.colourBox-green
+		{
+			background-color: green;	
+		}
+		&.colourBox-yellow
+		{
+			background-color: yellow;	
+		}
+		&.colourBox-orange
+		{
+			background-color: orange;	
+		}
+	}
+
+	&[type=checkbox]:checked + label.colourBox
+	{
+		border:1px solid #121212;
+		background-image:url("../images/checkbox.png");
+		background-repeat: no-repeat;
+		background-position:50% 0;
+	}
+	
+}
+

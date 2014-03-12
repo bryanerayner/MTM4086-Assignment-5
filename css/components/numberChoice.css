@@ -1,0 +1,6 @@
+.numberChoice {
+  margin-bottom: 1em; }
+  .numberChoice ._item {
+    float: left;
+    clear: left;
+    padding-top: .3em; }

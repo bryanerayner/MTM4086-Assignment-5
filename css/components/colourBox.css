@@ -1,0 +1,33 @@
+.colourBox[type=checkbox] {
+  display: none; }
+.colourBox[type=checkbox] + label.colourBox {
+  width: 12.5%;
+  height: 100%;
+  background-color: #000;
+  min-width: 30px;
+  min-height: 30px;
+  margin: 3px auto;
+  float: left;
+  display: block; }
+  .colourBox[type=checkbox] + label.colourBox.colourBox-black {
+    background-color: black; }
+  .colourBox[type=checkbox] + label.colourBox.colourBox-white {
+    background-color: white;
+    border: 1px solid #000; }
+  .colourBox[type=checkbox] + label.colourBox.colourBox-red {
+    background-color: red; }
+  .colourBox[type=checkbox] + label.colourBox.colourBox-purple {
+    background-color: purple; }
+  .colourBox[type=checkbox] + label.colourBox.colourBox-blue {
+    background-color: blue; }
+  .colourBox[type=checkbox] + label.colourBox.colourBox-green {
+    background-color: green; }
+  .colourBox[type=checkbox] + label.colourBox.colourBox-yellow {
+    background-color: yellow; }
+  .colourBox[type=checkbox] + label.colourBox.colourBox-orange {
+    background-color: orange; }
+.colourBox[type=checkbox]:checked + label.colourBox {
+  border: 1px solid #121212;
+  background-image: url("../images/checkbox.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0; }

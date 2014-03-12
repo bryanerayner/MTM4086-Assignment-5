@@ -1,26 +1,23 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Ye Olde Mobile Shope</title>
+		<title>Mr Bargain's Big Box Store - Refrigerators</title>
 		<link rel="stylesheet" href="css/mobile.css">
 		<script type = "text/javascript" src="bower_components/modernizr/modernizr.js"></script>
 	</head>
 	<body>
 		<div class="row">
-    <div class="large-12 columns">
+    <div class="medium-12 columns">
  
     <!-- Navigation -->
  
-      <div class="row">
-        <div class="large-12 columns">
- 
-          <nav class="top-bar" data-topbar>
+      <nav class="top-bar" data-topbar>
             <ul class="title-area">
               <!-- Title Area -->
               <li class="name">
                 <h1>
-                  <a href="#">
-                    Top Bar Title
+                  <a href="mobile.html">
+                    Mr. Bargain's Big Box Store
                   </a>
                 </h1>
               </li>
@@ -35,37 +32,37 @@
                   <a href="#">Appliances</a>
                   <ul class="dropdown">
                     <li><label>Kitchen</label></li>
-                    <li><a href="#">Stoves</a></li>
-                    <li><a href="#">Washing Machines</a></li>
-                    <li><a href="#">Refrigerators</a></li>
-                    <li><a href="#">Small Appliances</a></li>
+                    <li><a href="mobile.html">Stoves</a></li>
+                    <li><a href="mobile.html">Washing Machines</a></li>
+                    <li><a href="mobile.html">Refrigerators</a></li>
+                    <li><a href="mobile.html">Small Appliances</a></li>
                     <li class="divider"></li>
                     <li><label>Laundry</label></li>
-                    <li><a href="#">Washers</a></li>
-                    <li><a href="#">Dryers</a></li>
-                    <li><a href="#">Washer/Dryer Combos</a></li>
+                    <li><a href="mobile.html">Washers</a></li>
+                    <li><a href="mobile.html">Dryers</a></li>
+                    <li><a href="mobile.html">Washer/Dryer Combos</a></li>
                     <li class="divider"></li>
-                    <li><a href="#">See all &#8594;</a></li>
+                    <li><a href="mobile.html">See all &#8594;</a></li>
                   </ul>
                 </li>
                 <li class="divider"></li>
                 <li class="has-dropdown">
-                  <a href="#">Home Furnishings</a>
+                  <a href="mobile.html">Home Furnishings</a>
                   <ul class="dropdown">
-                  	<li><label>Living Room</label></li>
-                    <li><a href="#">Sofas</a></li>
-                    <li><a href="#">Coffee Tables</a></li>
-                    <li><a href="#">Shelving</a></li>
+                    <li><label>Living Room</label></li>
+                    <li><a href="mobile.html">Sofas</a></li>
+                    <li><a href="mobile.html">Coffee Tables</a></li>
+                    <li><a href="mobile.html">Shelving</a></li>
                     <li><label>Lighting</label></li>
-                    <li><a href="#">Lamps</a></li>
-                    <li><a href="#">Chandeliers</a></li>
-                    <li><a href="#">Nightstands</a></li>
+                    <li><a href="mobile.html">Lamps</a></li>
+                    <li><a href="mobile.html">Chandeliers</a></li>
+                    <li><a href="mobile.html">Nightstands</a></li>
                     <li class="divider"></li>
-                    <li><a href="#">See all &#8594;</a></li>
+                    <li><a href="mobile.html">See all &#8594;</a></li>
                   </ul>
                 </li>
-                <li class="hide-for-medium-down divider"></li>
-                <li class = "hide-for-medium-down"><a href="#">Shopping Cart (0)</a></li>
+                <li class="show-for-medium-up divider"></li>
+                <li class = "show-for-medium-up"><a href="mobile-shoppingCart.html">Shopping Cart (0)</a></li>
               </ul>
             </section>
           </nav>
@@ -82,12 +79,12 @@
  
     <!-- Thumbnails -->
  
-        <div class="large-8 large-push-4 columns">
+        <div class="medium-8 medium-push-4 columns">
           <div class="row">
-			<div class="small-12 columns show-for-medium-down">
+			<div class="small-12 columns hide-for-medium-up">
 				<div class="quicklinks">
 					<div class="left module btn"><a href="#filters">Refine Search &#8595;</a></div>
-					<div class = "right module btn btn-shoppingCart"><a href="#">Shopping Cart (0)</a></div>	
+					<div class = "right module btn btn-shoppingCart"><a href="mobile-shoppingCart.html">Shopping Cart (0)</a></div>	
 				</div>
 				
 			</div>
@@ -101,10 +98,12 @@
       			</div>
             <div class="small-12 columns">
               <div class="sortbar row collapse">
-                <div class="small-12 large-5  columns"> 
-                  <span class = "_sortbar-Label">Sort By:</span>
+                <div class="small-12 medium-3 large-5  columns"> 
+                  <div class="small-12 columns">
+                    <span class = "_sortbar-Label">Sort By:</span>
+                  </div>
                 </div>
-                <div class="small-12 large-7 columns">
+                <div class="small-12 medium-9 large-7 columns">
                 <div class="small-5  columns"> 
                   <span class = "_sortbar-Current _sortbar-Down _sortbar-criteria">Price (Low-High)</span>
                 </div>
@@ -118,57 +117,135 @@
               </div>
             </div>
         
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/1000x1000&text=Thumbnail">
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-1.jpg"></a>
  
               <div class="panel">
-                <h5>Item Name</h5>
-                <h6 class="subheader">$000.00</h6>
+                <h6 class = "_productName">Xtreme Freezer 4000</h6>
+                <h6 class="subheader">$4000.00</h6>
               </div>
             </div>
  
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/500x500&text=Thumbnail">
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-2.jpg"></a>
  
               <div class="panel">
-                <h5>Item Name</h5>
-                <h6 class="subheader">$000.00</h6>
+                <h6 class = "_productName">Frozone 800</h6>
+                <h6 class="subheader">$1200.00</h6>
               </div>
             </div>
  
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/500x500&text=Thumbnail">
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-3.jpg"></a>
  
               <div class="panel">
-                <h5>Item Name</h5>
-                <h6 class="subheader">$000.00</h6>
+                <h6 class = "_productName">Frostbite V2</h6>
+                <h6 class="subheader">$800.00</h6>
               </div>
             </div>
  
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/500x500&text=Thumbnail">
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-4.jpg"></a>
  
               <div class="panel">
-                <h5>Item Name</h5>
-                <h6 class="subheader">$000.00</h6>
+                <h6 class = "_productName">Frostbite V1</h6>
+                <h6 class="subheader">$500.00</h6>
               </div>
             </div>
  
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/500x500&text=Thumbnail">
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-5.jpg"></a>
  
               <div class="panel">
-                <h5>Item Name</h5>
-                <h6 class="subheader">$000.00</h6>
+                <h6 class = "_productName">Chill Box</h6>
+                <h6 class="subheader">$2000.00</h6>
               </div>
             </div>
  
-            <div class="large-4 small-6 columns">
-              <img src="http://placehold.it/500x500&text=Thumbnail">
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-6.jpg"></a>
  
               <div class="panel">
-                <h5>Item Name</h5>
-                <h6 class="subheader">$000.00</h6>
+                <h6 class = "_productName">Chill Box U 500</h6>
+                <h6 class="subheader">$2549.00</h6>
+              </div>
+            </div>
+
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-7.jpg"></a>
+ 
+              <div class="panel">
+                <h6 class = "_productName">Samsung Easy Freeze</h6>
+                <h6 class="subheader">$3000.00</h6>
+              </div>
+            </div>
+ 
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-8.jpg"></a>
+ 
+              <div class="panel">
+                <h6 class = "_productName">Frozone 1200</h6>
+                <h6 class="subheader">$1200.00</h6>
+              </div>
+            </div>
+ 
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-9.jpg"></a>
+ 
+              <div class="panel">
+                <h6 class = "_productName">IceBox Ultra Cool Fridge</h6>
+                <h6 class="subheader">$3999.00</h6>
+              </div>
+            </div>
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-1.jpg"></a>
+ 
+              <div class="panel">
+                <h6 class = "_productName">Koolinator 500</h6>
+                <h6 class="subheader">$5000.00</h6>
+              </div>
+            </div>
+ 
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-2.jpg"></a>
+ 
+              <div class="panel">
+                <h6 class = "_productName">Koolinator 600</h6>
+                <h6 class="subheader">$6000.00</h6>
+              </div>
+            </div>
+ 
+            <div class="medium-4 small-6 columns productThumbnail">
+              <a href="mobile-details.html"><img src="images/fridge-4.jpg"></a>
+ 
+              <div class="panel">
+                <h6 class = "_productName">Koolinator 700</h6>
+                <h6 class="subheader">$7000.00</h6>
+              </div>
+            </div>
+            <div class="small-12 columns">
+              <div class="small-12 medium-8 columns">
+                <ul class="pagination">
+                  <li class="arrow unavailable"><a href="">&laquo;</a></li>
+                  <li class="current"><a href="">1</a></li>
+                  <li><a href="">2</a></li>
+                  <li><a href="">3</a></li>
+                  <li><a href="">4</a></li>
+                  <li class="unavailable"><a href="">&hellip;</a></li>
+                  <li><a href="">12</a></li>
+                  <li><a href="">13</a></li>
+                  <li class="arrow"><a href="">&raquo;</a></li>
+                </ul>
+              </div>
+              <div class="small-12 medium-4 columns numberChoice">
+                <div class="small-12 medium-6 columns">
+                  <h6>Show:</h6>
+                </div>
+                <div class="small-12 medium-6 columns">
+                  <a href = "" class = "_item">12 items</a>
+                  <a href = "" class = "_item">24 items</a>
+                  <a href = "" class = "_item">All items</a>
+                </div>
               </div>
             </div>
           </div>
@@ -182,10 +259,10 @@
 
    <!-- Side Bar -->
  
-        <div class="large-4 large-pull-8 small-12  columns" id = "filters">
+        <div class="medium-4 medium-pull-8 small-12  columns" id = "filters">
 
 
-          <img class = "hide-for-medium-down" src="http://placehold.it/500x100&text=Logo">
+          <img class = "hide-for-medium-down" src="images/Logo.png">
  
         	<div class="panel clearfix">
           <form  class="" action="" method = "get">
@@ -209,10 +286,20 @@
               </div>
 
               <div class="small-12 columns">
+                <h6 class = "subheader">Features</h6>
+                <ul class="square">
+                  <li><a href="">French Door (15)</a></li>
+                  <li><a href="">Bottom Freezer (12)</a></li>
+                  <li><a href="">Energy Star (45)</a></li>
+                </ul>
+              </div>
+
+
+              <div class="small-12 columns">
                 <h6 class = "subheader">Price</h6>
               </div>
               
-            <div class="small-12 large-6 columns">
+            <div class="small-12 medium-6 columns">
               
 
               <div class="row collapse">
@@ -225,7 +312,7 @@
               </div>
              </div>
            </div>
-             <div class="small-12 large-6 columns">
+             <div class="small-12 medium-6 columns">
               <div class="row collapse">
               <label for ="price_max">Maximum Price</label>
               <div class="small-3 columns">
@@ -238,12 +325,45 @@
             </div>
             <div class="small-12 columns">
               <h6 class = "subheader">Colour</h6>
+              <div class="small-12 columns ">
+                <input type="checkbox" class="colourBox colourBox-black" id = "colourBox-black" >
+                <label for="colourBox-black" class="colourBox colourBox-black">
+                </label>
+              
+                <input type="checkbox" class="colourBox colourBox-white" id = "colourBox-white" >
+                <label for="colourBox-white" class="colourBox colourBox-white">
+                </label>
+              
+                <!-- <input type="checkbox" class="colourBox colourBox-red" id = "colourBox-red" >
+                <label for="colourBox-red" class="colourBox colourBox-red">
+                </label>
+              
+                <input type="checkbox" class="colourBox colourBox-purple" id = "colourBox-purple" >
+                <label for="colourBox-purple" class="colourBox colourBox-purple">
+                </label>
+              
+                <input type="checkbox" class="colourBox colourBox-blue" id = "colourBox-blue" >
+                <label for="colourBox-blue" class="colourBox colourBox-blue">
+                </label>
+              
+                <input type="checkbox" class="colourBox colourBox-green" id = "colourBox-green" >
+                <label for="colourBox-green" class="colourBox colourBox-green">
+                </label>
+              
+                <input type="checkbox" class="colourBox colourBox-yellow" id = "colourBox-yellow" >
+                <label for="colourBox-yellow" class="colourBox colourBox-yellow">
+                </label>
+              
+                <input type="checkbox" class="colourBox colourBox-orange" id = "colourBox-orange" >
+                <label for="colourBox-orange" class="colourBox colourBox-orange"> -->
+                </label>
+              </div>
             </div>
-            <!-- <div class="small-12 large-6 columns">
+            <!-- <div class="small-12 medium-6 columns">
 
             </div>
  -->
-            <div class="small-12 columns hide-for-large-up">
+            <div class="small-12 columns hide-for-medium-up">
                 <input type = "submit" id = "submit" class = "btn btn-submit right" value = "Apply Filters">
             </div>
 			    
@@ -266,19 +386,19 @@
     <!-- Footer -->
  
       <footer class="row">
-        <div class="large-12 columns"><hr />
+        <div class="medium-12 columns"><hr />
           <div class="row">
  
-            <div class="large-6 columns">
-              <p>© Copyright no one at all. Go to town.</p>
+            <div class="medium-6 columns">
+              <p>&copy; Mr Bargain's Big Box Store</p>
             </div>
  
-            <div class="large-6 columns">
+            <div class="medium-6 columns">
               <ul class="inline-list right">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Find A Store</a></li>
+                <li><a href="#">Corporate Responsibility</a></li>
+                <li><a href="#">News</a></li>
               </ul>
             </div>
  

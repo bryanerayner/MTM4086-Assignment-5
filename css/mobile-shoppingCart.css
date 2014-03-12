@@ -5638,6 +5638,12 @@ th.hide-for-touch {
     clear: left;
     padding-top: .3em; }
 
+.productPhotos {
+  margin-top: 1em; }
+
+.checkoutRow ._productPhoto {
+  float: left; }
+
 .colourBox[type=checkbox] {
   display: none; }
 .colourBox[type=checkbox] + label.colourBox {

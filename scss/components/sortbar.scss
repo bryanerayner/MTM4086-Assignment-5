@@ -7,7 +7,8 @@
 	 ._sortbar-Label
 	{
 		font-size: .9em; font-size: .9rem;
-		padding: .1em;
+		padding: .1em; padding-top: .5em; padding-bottom:.5em;
+		display: inline-block;
 	}
 
 	 ._sortbar-Current
